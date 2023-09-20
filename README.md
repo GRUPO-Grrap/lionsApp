@@ -35,3 +35,41 @@ Se desejar contribuir para este projeto, siga as etapas abaixo:
 - Faça suas alterações e adicione seus commits no padrão descrito acima
 - Envie a branch (git push origin feature/nova-feature)
 - Abra um Pull Request
+
+
+# Padrão de Criação de Branches
+O padrão para criar branches pode seguir a seguinte estrutura: <tipo>/<descricao>
+
+## Tipo: Indica a natureza da branch (obrigatório). Exemplos de tipos incluem:
+- feature: Para o desenvolvimento de uma nova funcionalidade.
+- fix: Para correção de bugs.
+- hotfix: Para correção de bugs críticos em produção.
+- chore: Para tarefas de manutenção, configurações ou outras atividades não relacionadas a
+- funcionalidades específicas.
+- docs: Para atualizações ou adições de documentação.
+- release: Para preparação de uma nova versão para release.
+- test: Para adição ou modificação de testes.
+- Descrição: Breve descrição da funcionalidade ou bug que está sendo tratado (obrigatório).
+
+# Exemplos de Nomenclatura de Branches
+- feature/nova-funcionalidade
+- fix/correcao-login
+- hotfix/bug-critico-producao
+- chore/atualizacao-dependencias
+- docs/atualizacao-readme
+- release/prepara-versao-1.0
+- test/adiciona-testes-autenticacao
+
+# Considerações
+ 
+- ## Mantenha Consistência:
+  - É importante manter a consistência na aplicação desse padrão em toda a equipe para evitar confusões.
+
+- ## Evite Caracteres Especiais:
+  - Evite caracteres especiais e espaços na nomenclatura, pois podem causar problemas em alguns sistemas.
+
+- ## Seja Descritivo:
+  - A descrição deve ser informativa e concisa, refletindo claramente o propósito da branch.
+
+- ## Utilize Hífens ou Underlines:
+  - Use hífens ou underlines para separar palavras na descrição, o que melhora a legibilidade.
