@@ -1,24 +1,28 @@
 import React from "react";
+import { Touchable, TouchableOpacity } from "react-native";
 import { View, Text, Button, StyleSheet } from "react-native";
 
 interface IProps {
   name: String;
+  backgroundTheme: String;
 }
 
 const ButtonForm = (props: IProps) => {
   const name = props.name;
+  const selectedStyle =
+    props.backgroundTheme === "primary" ? styles.primary : styles.secondary;
   return (
-    <View style={style.container}>
-      <View style={style.areaButton}>
-        <View style={style.button}>
-          <Text style={style.textButton}>{name}</Text>
-        </View>
+    <View style={styles.container}>
+      <View style={styles.areaButton}>
+        <TouchableOpacity style={[styles.button, selectedStyle]}>
+          <Text style={selectedStyle}>{name}</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
 };
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "column",
@@ -33,17 +37,24 @@ const style = StyleSheet.create({
     height: 117,
     padding: 12,
   },
+  // Estilização do botão
   button: {
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#ADADAD",
     width: "100%",
     height: 40,
     borderRadius: 8,
   },
-  textButton: {
+  // Varição da cor do botão
+  primary: {
+    backgroundColor: "#1C509C",
+    color: "#FFFFFF",
     fontWeight: "bold",
+  },
+  secondary: {
+    backgroundColor: "#ADADAD",
     color: "#5F5F5F",
+    fontWeight: "bold",
   },
 });
 
