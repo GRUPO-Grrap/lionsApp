@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import ButtonForm from "./src/components/button";
+import { Image, StyleSheet, Text, View } from "react-native";
+
 import LoginScreen from "./src/screens/login";
 
 export default function App() {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "#F1F1F1",
     justifyContent: "flex-end",
-    margin: 12,
-    rowGap: 8,
+    // margin: 12,
+    // rowGap: 8,
   },
 });

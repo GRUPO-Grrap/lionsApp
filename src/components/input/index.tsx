@@ -1,7 +1,6 @@
 import React from "react";
 import { View } from "react-native";
 import { Text, TextInput, StyleSheet } from "react-native";
-import { Icon, Input } from "react-native-elements";
 
 interface IProps {
   title: string;
