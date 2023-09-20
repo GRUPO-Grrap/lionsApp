@@ -15,7 +15,7 @@
 - feat(login): Adiciona página de login
 - fix(api): Corrige bug na rota de autenticação
 - docs(readme): Atualiza instruções de instalação
-- 
+  
 Mantenha as mensagens de commit claras, concisas e descritivas para uma melhor compreensão do histórico do projeto.
 
 # Instalação
