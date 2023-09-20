@@ -2,7 +2,7 @@
 - Este projeto segue um padrão de commit baseado no Conventional Commits para manter um histórico de alterações organizado e fácil de entender.
 - As mensagens de commit seguem o formato: <tipo>(<escopo>): <mensagem>
 
-## Tipos de Commit
+### Tipos de Commit
 - feat: Nova funcionalidade adicionada
 - fix: Correção de bugs
 - chore: Atualizações de tarefas, configurações, etc.
@@ -11,14 +11,14 @@
 - refactor: Refatoração do código
 - test: Adição ou modificação de testes
 
-## Exemplos de Commits
+### Exemplos de Commits
 - feat(login): Adiciona página de login
 - fix(api): Corrige bug na rota de autenticação
 - docs(readme): Atualiza instruções de instalação
   
 Mantenha as mensagens de commit claras, concisas e descritivas para uma melhor compreensão do histórico do projeto.
 
-# Instalação
+## Instalação
 - npx create-expo-app nomeDoProjeto
 Documentação: https://reactnative.dev/docs/environment-setup
 
@@ -28,7 +28,7 @@ React Native elemente:
 - npm install react-native-vector-icons
 Documentação: https://reactnativeelements.com/docs/installation#using-expo
 
-# Como Contribuir
+## Como Contribuir
 Se desejar contribuir para este projeto, siga as etapas abaixo:
 - Faça um fork do projeto
 - Crie uma nova branch (git checkout -b feature/nova-feature)
@@ -51,7 +51,7 @@ O padrão para criar branches pode seguir a seguinte estrutura: <tipo>/<descrica
 - test: Para adição ou modificação de testes.
 - Descrição: Breve descrição da funcionalidade ou bug que está sendo tratado (obrigatório).
 
-# Exemplos de Nomenclatura de Branches
+## Exemplos de Nomenclatura de Branches
 - feature/nova-funcionalidade
 - fix/correcao-login
 - hotfix/bug-critico-producao
@@ -60,16 +60,16 @@ O padrão para criar branches pode seguir a seguinte estrutura: <tipo>/<descrica
 - release/prepara-versao-1.0
 - test/adiciona-testes-autenticacao
 
-# Considerações
+## Considerações
  
-- ## Mantenha Consistência:
+- ### Mantenha Consistência:
   - É importante manter a consistência na aplicação desse padrão em toda a equipe para evitar confusões.
 
-- ## Evite Caracteres Especiais:
+- ### Evite Caracteres Especiais:
   - Evite caracteres especiais e espaços na nomenclatura, pois podem causar problemas em alguns sistemas.
 
-- ## Seja Descritivo:
+- ### Seja Descritivo:
   - A descrição deve ser informativa e concisa, refletindo claramente o propósito da branch.
 
-- ## Utilize Hífens ou Underlines:
+- ### Utilize Hífens ou Underlines:
   - Use hífens ou underlines para separar palavras na descrição, o que melhora a legibilidade.
