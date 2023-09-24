@@ -151,7 +151,7 @@ const remove = (id) => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "DELETE FROM usuario WHERE id=?;",
+        "DELETE FROM usuariogit WHERE id=?;",
         [id],
         //-----------------------
         (_, { rowsAffected }) => {
