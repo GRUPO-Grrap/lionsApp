@@ -73,3 +73,19 @@ O padrão para criar branches pode seguir a seguinte estrutura: <tipo>/<descrica
 
 - ### Utilize Hífens ou Underlines:
   - Use hífens ou underlines para separar palavras na descrição, o que melhora a legibilidade.
+ 
+# Commits
+ ### Os commits devem seguir os mesmos padrões das branches, porém, com algumas alterações mínimas. Devem ter o tipo do commit seguido com : e a descrição da atividade a ser realizada. Confere como eles devem ser realizados:
+
+Tipo do Commit:
+feat: Para uma funcionalidade nova.
+fix: Para correção de algum bug/erro da aplicação.
+refac: Para refatoração de códigos.
+chore: Para alteração dos arquivos de configuração, como por exemplo, os arquivos package.json e .env.
+doc: Para alteração de todas as documentação, como o README, documentações de API's caso tenham, entre outros.
+Descrição: O nome pode ser um pouco mais descritivo, especificando maiores detalhes, sempre com a primeira letra maiúscula.
+Exemplos de Commits:
+feat: Added header component on home page.
+fix: Layout break on contact page.
+chore: Alter config of database.
+doc: Added manual installation of project.
