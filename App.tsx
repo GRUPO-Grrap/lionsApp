@@ -2,10 +2,12 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import ButtonForm from "./src/components/button";
+import CheckboxComponent from "./src/components/checkbox/Index";
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <CheckboxComponent />
       <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
       <StatusBar style="auto" />
     </View>
