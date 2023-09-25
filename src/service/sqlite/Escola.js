@@ -11,7 +11,7 @@ db.transaction((tx) => {
   //<<<<<<<<<<<<<<<<<<<<<<<< USE ISSO APENAS DURANTE OS TESTES!!! >>>>>>>>>>>>>>>>>>>>>>>
 
   tx.executeSql(
-    "CREATE TABLE IF NOT EXISTS usuario (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, endereco TEXT, cpf TEXT, telefone INT);"
+    "CREATE TABLE IF NOT EXISTS escola (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, endereco TEXT, diretor TEXT, telefone INT);"
   );
 });
 
@@ -27,7 +27,7 @@ const create = (obj) => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "INSERT INTO usuario (nome, endereco, cpf, telefone) values (?, ?, ?, ?);",
+        "INSERT INTO escola (nome, endereco, diretor, telefone) values (?, ?, ?, ?);",
         [obj.brand, obj.model, obj.hp],
         //-----------------------
         (_, { rowsAffected, insertId }) => {
@@ -52,7 +52,7 @@ const update = (id, obj) => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "UPDATE usuario SET nome=?, endereco=?, cpf=?, telefone=? WHERE id=?;",
+        "UPDATE escola SET nome=?, endereco=?, diretor=?, telefone=? WHERE id=?;",
         [obj.brand, obj.model, obj.hp, id],
         //-----------------------
         (_, { rowsAffected }) => {
@@ -77,7 +77,7 @@ const find = (id) => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "SELECT * FROM usuario WHERE id=?;",
+        "SELECT * FROM escola WHERE id=?;",
         [id],
         //-----------------------
         (_, { rows }) => {
@@ -103,7 +103,7 @@ const findByBrand = (brand) => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "SELECT * FROM usuario WHERE nome LIKE ?;",
+        "SELECT * FROM escola WHERE nome LIKE ?;",
         [brand],
         //-----------------------
         (_, { rows }) => {
@@ -129,7 +129,7 @@ const all = () => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "SELECT * FROM usuario;",
+        "SELECT * FROM escola;",
         [],
         //-----------------------
         (_, { rows }) => resolve(rows._array),
@@ -151,7 +151,7 @@ const remove = (id) => {
     db.transaction((tx) => {
       //comando SQL modificável
       tx.executeSql(
-        "DELETE FROM usuario WHERE id=?;",
+        "DELETE FROM escola WHERE id=?;",
         [id],
         //-----------------------
         (_, { rowsAffected }) => {
