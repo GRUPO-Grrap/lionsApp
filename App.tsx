@@ -1,7 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
 
+import { StyleSheet, Text, View } from "react-native";
+import ButtonForm from "./src/components/button";
+import CheckboxComponent from "./src/components/checkbox/Index";
 import LoginScreen from "./src/screens/login";
 
 export default function App() {

@@ -1,7 +1,8 @@
 import { View, StyleSheet, Image } from "react-native";
 import ButtonForm from "../../components/button";
-import { CheckBox, Input } from "@rneui/base";
+import { CheckBox, Input, Text } from "@rneui/base";
 import { useState } from "react";
+import CheckboxComponent from "../../components/checkbox/Index";
 
 const LoginScreen = () => {
   return (
@@ -12,8 +13,9 @@ const LoginScreen = () => {
           source={require("../../assets/meninoComOculos.png")}
         />
       </View>
-      <View style={styles.form}>
-        <View style={styles.sectionForm}>
+      <View style={styles.sectionForm}>
+        <View style={styles.form}>
+          <Text style={styles.tituloLogin}>Login</Text>
           <Input
             placeholder="seuemail@example.com"
             leftIcon={{ type: "ionicon", name: "mail-outline" }}
@@ -24,9 +26,14 @@ const LoginScreen = () => {
             rightIcon={{ type: "ionicon", name: "eye-off-outline" }}
             secureTextEntry={true}
           />
-        </View>
+          <CheckboxComponent />
 
-        <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
+          <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
+          <View style={styles.textCadastrar}>
+            <Text>Quer fazer parte da nossa comunidade?</Text>
+            <Text style={styles.linkCadastrar}>CADASTRE-SE</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -37,21 +44,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  form: {
-    position: "absolute",
-    top: 260,
-    backgroundColor: "#fff",
-    height: "75%",
-    justifyContent: "center",
+  tituloLogin: {
+    fontSize: 32,
+    fontWeight: "bold",
+    marginBottom: 40,
+  },
+  sectionForm: {
     width: "100%",
+    height: "100%",
+    marginTop: "60%",
+    position: "absolute",
+    justifyContent: "center",
+
+    backgroundColor: "#fff",
+    paddingHorizontal: 12,
     borderTopLeftRadius: 56,
     borderTopRightRadius: 56,
   },
-  sectionForm: {
-    marginLeft: 12,
-    marginRigth: 12,
-    justifyContent: "flex-end",
+  form: {
+    width: "100%",
+    height: "100%",
+    marginTop: "50%",
   },
+
   sectionImage: {
     justifyContent: "flex-start",
     width: "100%",
@@ -59,5 +74,12 @@ const styles = StyleSheet.create({
   image: {
     justifyContent: "flex-start",
     width: "100%",
+  },
+  textCadastrar: {
+    alignItems: "center",
+  },
+  linkCadastrar: {
+    color: "#1C509C",
+    textDecorationLine: "underline",
   },
 });
