@@ -3,21 +3,18 @@ import { Image, StyleSheet, View } from "react-native";
 import ButtonForm from "../../components/button";
 import CheckboxComponent from "../../components/checkbox/Index";
 
-const LoginScreen = ({ navigation }) => {
-  const goToRegister = () => {
-    navigation.navigate("Register");
-  };
+const RegisterScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.sectionImage}>
         <Image
           style={styles.image}
-          source={require("../../assets/meninoComOculos.png")}
+          source={require("../../assets/meninaComOculos.png")}
         />
       </View>
       <View style={styles.sectionForm}>
         <View style={styles.form}>
-          <Text style={styles.tituloLogin}>Login</Text>
+          <Text style={styles.tituloLogin}>Cadastro</Text>
           <Input
             placeholder="seuemail@example.com"
             leftIcon={{ type: "ionicon", name: "mail-outline" }}
@@ -33,16 +30,14 @@ const LoginScreen = ({ navigation }) => {
           <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
           <View style={styles.textCadastrar}>
             <Text>Quer fazer parte da nossa comunidade?</Text>
-            <Text onPress={goToRegister} style={styles.linkCadastrar}>
-              CADASTRE-SE
-            </Text>
+            <Text style={styles.linkCadastrar}>CADASTRE-SE</Text>
           </View>
         </View>
       </View>
     </View>
   );
 };
-export default LoginScreen;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
