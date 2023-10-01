@@ -7,33 +7,31 @@ import CheckboxComponent from "../../components/checkbox/Index";
 const LoginScreen = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.formBox}>
-        <View style={styles.sectionImage}>
-          <Image
-            style={styles.image}
-            source={require("../../assets/meninoComOculos.png")}
-          />
-        </View>
+      <View style={styles.sectionImage}>
+        <Image
+          style={styles.image}
+          source={require("../../assets/meninoComOculos.png")}
+        />
+      </View>
+      <View style={styles.sectionForm}>
         <View style={styles.form}>
-          <View style={styles.sectionForm}>
-            <Text style={styles.tituloLogin}>Login</Text>
-            <Input
-              placeholder="seuemail@example.com"
-              leftIcon={{ type: "ionicon", name: "mail-outline" }}
-            />
-            <Input
-              placeholder="Sua senha"
-              leftIcon={{ type: "ionicon", name: "lock-closed-outline" }}
-              rightIcon={{ type: "ionicon", name: "eye-off-outline" }}
-              secureTextEntry={true}
-            />
-            <CheckboxComponent />
+          <Text style={styles.tituloLogin}>Login</Text>
+          <Input
+            placeholder="seuemail@example.com"
+            leftIcon={{ type: "ionicon", name: "mail-outline" }}
+          />
+          <Input
+            placeholder="Sua senha"
+            leftIcon={{ type: "ionicon", name: "lock-closed-outline" }}
+            rightIcon={{ type: "ionicon", name: "eye-off-outline" }}
+            secureTextEntry={true}
+          />
+          <CheckboxComponent />
 
-            <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
-            <View style={styles.textCadastrar}>
-              <Text>Quer fazer parte da nossa comunidade?</Text>
-              <Text style={styles.linkCadastrar}>CADASTRE-SE</Text>
-            </View>
+          <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
+          <View style={styles.textCadastrar}>
+            <Text>Quer fazer parte da nossa comunidade?</Text>
+            <Text style={styles.linkCadastrar}>CADASTRE-SE</Text>
           </View>
         </View>
       </View>
@@ -49,30 +47,26 @@ const styles = StyleSheet.create({
   tituloLogin: {
     fontSize: 32,
     fontWeight: "bold",
-    marginBottom: 64,
+    marginBottom: 40,
   },
-  formBox: {
+  sectionForm: {
+    width: "100%",
+    height: "100%",
+    marginTop: "60%",
     position: "absolute",
+    justifyContent: "center",
 
     backgroundColor: "#fff",
-
-    width: "100%",
-    justifyContent: "center",
+    paddingHorizontal: 12,
     borderTopLeftRadius: 56,
     borderTopRightRadius: 56,
   },
   form: {
-    backgroundColor: "#fff",
-
     width: "100%",
-    borderTopLeftRadius: 56,
-    borderTopRightRadius: 56,
+    height: "100%",
+    marginTop: "50%",
   },
-  sectionForm: {
-    marginLeft: 12,
-    marginRigth: 12,
-    justifyContent: "flex-end",
-  },
+
   sectionImage: {
     justifyContent: "flex-start",
     width: "100%",
