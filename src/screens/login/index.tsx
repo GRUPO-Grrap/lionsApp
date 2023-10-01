@@ -1,7 +1,6 @@
-import { View, StyleSheet, Image } from "react-native";
+import { Input, Text } from "@rneui/base";
+import { Image, StyleSheet, View } from "react-native";
 import ButtonForm from "../../components/button";
-import { CheckBox, Input, Text } from "@rneui/base";
-import { useState } from "react";
 import CheckboxComponent from "../../components/checkbox/Index";
 
 const LoginScreen = () => {
