@@ -22,11 +22,17 @@ Mantenha as mensagens de commit claras, concisas e descritivas para uma melhor c
 - npx create-expo-app nomeDoProjeto
 Documentação: https://reactnative.dev/docs/environment-setup
 
+
 ## Bibliotecas
 React Native elemente: 
 - npm install @rneui/themed @rneui/base
 - npm install react-native-vector-icons
 Documentação: https://reactnativeelements.com/docs/installation#using-expo
+
+React Native Navigating Between Screens
+- npx expo install react-native-screens react-native-safe-area-context
+- Documentação: https://reactnative.dev/docs/navigation
+
 
 ## Como Contribuir
 Se desejar contribuir para este projeto, siga as etapas abaixo:
