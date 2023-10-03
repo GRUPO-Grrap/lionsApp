@@ -13,11 +13,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Login"
           component={LoginScreen}
           options={{ headerShown: false }} // Oculta completamente a barra de navegação na tela de Login
-        />
+        /> */}
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
