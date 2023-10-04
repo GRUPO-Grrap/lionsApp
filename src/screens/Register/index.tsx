@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   tituloLogin: {
     fontSize: 32,
     fontWeight: "bold",
-    marginBottom: 40,
+    marginBottom: 0,
   },
   sectionForm: {
     width: "100%",
