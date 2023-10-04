@@ -1,6 +1,6 @@
+import { Icon, Input } from "@rneui/base";
 import React from "react";
-import { View } from "react-native";
-import { Text, TextInput, StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 interface IProps {
   title: string;

@@ -1,6 +1,7 @@
+import { Button } from "@rneui/base";
+import { ButtonGroup } from "@rneui/themed";
 import React from "react";
-import { Touchable, TouchableOpacity } from "react-native";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 interface IProps {
   name: String;
@@ -8,9 +9,10 @@ interface IProps {
 }
 
 const ButtonForm = (props: IProps) => {
-  const name = props.name;
+  const { name, backgroundTheme } = props;
   const selectedStyle =
-    props.backgroundTheme === "primary" ? styles.primary : styles.secondary;
+    backgroundTheme === "primary" ? styles.primary : styles.secondary;
+
   return (
     <View style={styles.container}>
       <View style={styles.areaButton}>

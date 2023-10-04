@@ -2,56 +2,78 @@ import { Input, Text } from "@rneui/base";
 import {
   Image,
   KeyboardAvoidingView,
+  SafeAreaView,
   ScrollView,
   StyleSheet,
+  TouchableOpacity,
   View,
 } from "react-native";
 import ButtonForm from "../../components/button";
 import CheckboxComponent from "../../components/checkbox/Index";
-import { SafeAreaView } from "react-native-safe-area-context";
 
-const LoginScreen = ({ navigation }) => {
-  const goToRegister = () => {
-    navigation.navigate("Register");
-  };
+const RegisterScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView
         contentContainerStyle={styles.scrollContainer}
         keyboardShouldPersistTaps="handled"
       >
-        <View style={styles.sectionImage}>
-          <Image
-            style={styles.image}
-            source={require("../../assets/meninoComOculos.png")}
-          />
-        </View>
         <KeyboardAvoidingView
           style={styles.keyboardAvoidingContainer}
           behavior="padding"
         >
+          <View style={styles.sectionImage}>
+            <Image
+              style={styles.image}
+              source={require("../../assets/meninaComOculos.png")}
+            />
+          </View>
+
           <View style={styles.sectionForm}>
             <View style={styles.form}>
-              <Text style={styles.tituloLogin}>Login</Text>
+              <Text style={styles.tituloLogin}>Cadastro</Text>
+              <Input
+                placeholder="Seu nome"
+                leftIcon={{ type: "ionicon", name: "person-outline" }}
+              />
               <Input
                 placeholder="seuemail@example.com"
                 leftIcon={{ type: "ionicon", name: "mail-outline" }}
               />
+
               <Input
-                placeholder="Insira sua senha "
+                placeholder="Crie uma senha forte"
                 leftIcon={{ type: "ionicon", name: "lock-closed-outline" }}
                 rightIcon={{ type: "ionicon", name: "eye-off-outline" }}
                 secureTextEntry={true}
               />
-
+              <Input
+                placeholder="Confirme sua senha"
+                leftIcon={{ type: "ionicon", name: "lock-closed-outline" }}
+                rightIcon={{ type: "ionicon", name: "eye-off-outline" }}
+                secureTextEntry={true}
+              />
+              <Input
+                placeholder="Insira sua chave privada"
+                leftIcon={{ type: "ionicon", name: "shield-checkmark-outline" }}
+              />
               <CheckboxComponent />
-
               <ButtonForm name={"Enviar"} backgroundTheme={"primary"} />
               <View style={styles.textCadastrar}>
-                <Text>Quer fazer parte da nossa comunidade?</Text>
-                <Text onPress={goToRegister} style={styles.linkCadastrar}>
-                  CADASTRE-SE
+                <Text>
+                  Para cadastrar-se na comunidade é necessário sua chave de
+                  registro com o responsável.
                 </Text>
+                <TouchableOpacity>
+                  <Text style={styles.linkCadastrar}>SOLICITAR CHAVE</Text>
+                </TouchableOpacity>
+              </View>
+              <View style={styles.textCadastrar}>
+                <TouchableOpacity>
+                  <Text style={styles.linkCadastrar}>
+                    Ir para área de login
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -60,13 +82,12 @@ const LoginScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 };
-export default LoginScreen;
+export default RegisterScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "#fff",
   },
   keyboardAvoidingContainer: {
     justifyContent: "center",
@@ -78,11 +99,15 @@ const styles = StyleSheet.create({
   tituloLogin: {
     fontSize: 32,
     fontWeight: "bold",
-    marginBottom: 40,
+    marginBottom: 0,
   },
   sectionForm: {
     width: "100%",
-    marginTop: "-60%",
+    height: "60%",
+    marginTop: "-10%",
+
+    justifyContent: "center",
+
     backgroundColor: "#fff",
     paddingHorizontal: 12,
     borderTopLeftRadius: 56,
@@ -90,7 +115,8 @@ const styles = StyleSheet.create({
   },
   form: {
     width: "100%",
-    marginTop: "30%",
+    height: "100%",
+    marginTop: "40%",
   },
 
   sectionImage: {

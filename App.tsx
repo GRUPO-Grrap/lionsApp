@@ -1,19 +1,34 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 
-import { StyleSheet, Text, View } from "react-native";
-import ButtonForm from "./src/components/button";
-import CheckboxComponent from "./src/components/checkbox/Index";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StyleSheet } from "react-native";
 import LoginScreen from "./src/screens/login";
+import RegisterScreen from "./src/screens/Register";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <LoginScreen />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }} // Oculta completamente a barra de navegação na tela de Login
+        />
+        <Stack.Screen
+          name="Register"
+          component={RegisterScreen}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
